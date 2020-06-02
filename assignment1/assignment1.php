@@ -65,7 +65,7 @@
     //ข้อ1.4
     echo "1.4<br>-";
 
-    // $sql = "SELECT COUNT(add_points.user_id) AS total FROM add_points INNER JOIN lucky_codes ON add_points.user_id = lucky_codes.user_id";
+    // $sql = "SELECT COUNT(DISTINCT lucky_codes.user_id) AS total FROM lucky_codes INNER JOIN add_points ON lucky_codes.user_id = add_points.user_id";
     // $result = $conn->query($sql);
 
     $user = array_intersect($add_points,$lucky_codes);
